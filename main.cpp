@@ -2,8 +2,13 @@
 #include "bitset"
 
 int main() {
-    int value = 0x01F1;
-    int newValue = value|0b101000000000000010;
+    unsigned int value;
+    std::cin >> value;
+    unsigned int maska = 0;
+    maska-=1;
+    maska-=(32+16+8);
+    std::cout << std::bitset<32>(maska) << "\n";
+    unsigned int newValue = value&maska;
     std::cout << std::bitset<32>(newValue);
     return 0;
 }
