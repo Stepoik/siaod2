@@ -2,8 +2,10 @@
 #include "bitset"
 
 int main() {
-    unsigned int value = 0x01F1;
-    unsigned int newValue = value|0b101000000000000010;
+    unsigned int value;
+    std::cin >> value;
+    unsigned int newValue = value << 6;
     std::cout << std::bitset<32>(newValue);
+    std::cout << "\n" << newValue;
     return 0;
 }
