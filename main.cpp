@@ -6,8 +6,8 @@
 void shuffle(std::vector<int> &values){
 	srand(time(nullptr));
 	for (int i = 0; i < values.size(); i++){
-		int firstIndex = rand()%values.size();
-		int secondIndex = rand()%values.size();
+		int firstIndex = (int)((float)(rand()) / (float)(rand())*10000000)%values.size();
+		int secondIndex = (int)((float)(rand()) / (float)(rand())*10000000)%values.size();
 		int remember = values[firstIndex];
 		values[firstIndex] = values[secondIndex];
 		values[secondIndex] = remember;
